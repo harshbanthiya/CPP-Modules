@@ -1,30 +1,30 @@
 #include <iostream>
 #include "Contact.h"
+#include "Phonebook.h"
 
-namespace welcome {
-    std::string add = "ADD";
-    std::string search = "SEARCH";
-    std::string exit = "EXIT";
-
-    void f() {
-        std::cout << "Welcome to this rudimentary PhoneBook!" << std::endl;
-        std::cout << "Type ADD or SEARCH to create and find a contact and TYPE EXIT to quit this program." << std::endl;
-    }
+void print_menu()
+{
+    std::cout << "Welcome to this rudimentary phonebook!" << std::endl;
+    std::cout << "To add a contact enter ADD" << std::endl;
+    std::cout << "To search the phonebook enter SEARCH" << std::endl;
+    std::cout << "To exit the phonebook enter EXIT" << std::endl;
 }
 int main()
 {
-    std::string input;
-    welcome::f();
-    while (1)
+    Phonebook   phonebook;
+    std::string line;
+    print_menu();
+    while (std::getline(std::cin, line))
     {
 
-        if (input.compare(welcome::add) == 0)
-        {
-            Contact contact;
-            contact.addcontact();
-        }
-        if (input.compare(welcome::exit) == 0)
-            break ;
+        if (line == "ADD")
+            phonebook.add_contact(line);
+        if (line == "SEARCH")
+            phonebook.search_contact(line);
+        if (line == "EXIT")
+            return (0);
+        else
+            std::cout << "Input not recognised, please try again !" << std::endl;
     }
     return 0;
 }

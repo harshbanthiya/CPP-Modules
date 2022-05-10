@@ -10,15 +10,17 @@
 #include <iostream>
 
 class Contact {
-public:
+private:
+    int         index;
     std::string firstname;
     std::string lastname;
     std::string phone_number;
     std::string darkest_secret;
-
+public:
     Contact();
     virtual ~Contact();
-    void addcontact();
+    void fillcontact();
+    void displaycontact();
 };
 
 

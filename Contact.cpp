@@ -6,23 +6,24 @@
 
 Contact::Contact()
 {
-    std::cout << "Enter First Name: " << std::endl;
-    std::cin >> firstname;
-    std::cout << "Enter Last Name: " << std::endl;
-    std::cin >> lastname;
-    std::cout << "Enter Phone Number: " << std::endl;
-    std::cin >> phone_number;
-    std::cout << "Enter your darkest secret: " << std::endl;
-    std::cin >> darkest_secret;
-    std::cout << "Contact Created Successfully for " << firstname << " !" << std::endl;
+
 }
 
 Contact::~Contact() {
 
 }
 
+void Contact::displaycontact() {
+
+}
+
+void Contact::fillcontact() {
+
+}
+/*
 void Contact::addcontact() {
-    std::cout << "Enter First Name: " << std::endl;
+
+     std::cout << "Enter First Name: " << std::endl;
     std::cin >> firstname;
     std::cout << "Enter Last Name: " << std::endl;
     std::cin >> lastname;
@@ -36,5 +37,7 @@ void Contact::addcontact() {
     else
         std::cout << "Contact created successfully for " << firstname << " !" << std::endl;
 
+
 }
 
+  */
