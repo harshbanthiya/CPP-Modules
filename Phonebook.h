@@ -1,22 +1,23 @@
 //
-// Created by Hersh Banthiya on 2022-05-07.
+// Created by Hersh Banthiya on 2022-05-17.
 //
 
-#ifndef HELLOWORLD_PHONEBOOK_H
-#define HELLOWORLD_PHONEBOOK_H
+#ifndef PHONEBOOK_PHONEBOOK_H
+#define PHONEBOOK_PHONEBOOK_H
 #include "Contact.h"
-#define max_contacts 8
+#define MAX_LIMIT 3
 
 class Phonebook {
 private:
-    int     last_index;
-    Contact contacts[max_contacts];
+    int     current_index;
 public:
+    Contact contacts[MAX_LIMIT];
     Phonebook();
     virtual ~Phonebook();
-    void add_contact(std::string line);
-    void search_contact(std::string line);
+    void add_to_phonebook(int index);
+    void display_all_contacts();
+    void display_contact_by_index(int index);
 };
 
 
-#endif //HELLOWORLD_PHONEBOOK_H
+#endif //PHONEBOOK_PHONEBOOK_H

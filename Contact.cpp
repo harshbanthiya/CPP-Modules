@@ -1,43 +1,29 @@
 //
-// Created by Hersh Banthiya on 2022-05-07.
+// Created by Hersh Banthiya on 2022-05-17.
 //
 
 #include "Contact.h"
 
-Contact::Contact()
-{
-
-}
+Contact::Contact() {}
 
 Contact::~Contact() {
 
 }
 
-void Contact::displaycontact() {
-
+void Contact::add_contact() {
+    std::cout << "Enter First Name" << std::endl;
+    std::cin >> first_name;
+    std::cout << "Enter Family Name" << std::endl;
+    std::cin >> last_name;
+    std::cout << "Enter Phone Number" << std::endl;
+    std::cin >> phone;
+    std::cout << " Enter Email"<< std::endl;
+    std::cin >> email;
+    std::cout << " Enter secret " << std::endl;
+    std::cin >> secret;
 }
 
-void Contact::fillcontact() {
+void Contact::display_contact() {
+    std::cout << first_name << " " << last_name << " " << phone << " " << email << " " << secret << std::endl;
+};
 
-}
-/*
-void Contact::addcontact() {
-
-     std::cout << "Enter First Name: " << std::endl;
-    std::cin >> firstname;
-    std::cout << "Enter Last Name: " << std::endl;
-    std::cin >> lastname;
-    std::cout << "Enter Phone Number: " << std::endl;
-    std::cin >> phone_number;
-    std::cout << "Enter your darkest secret: " << std::endl;
-    std::cin >> darkest_secret;
-    if (firstname.empty() || lastname.empty() || phone_number.empty() || darkest_secret.empty()) {
-        std::cout << "Error! Contact cannot be created as one of the field is left blank!" << std::endl;
-    }
-    else
-        std::cout << "Contact created successfully for " << firstname << " !" << std::endl;
-
-
-}
-
-  */

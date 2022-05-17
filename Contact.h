@@ -1,27 +1,25 @@
 //
-// Created by Hersh Banthiya on 2022-05-07.
+// Created by Hersh Banthiya on 2022-05-17.
 //
 
-#ifndef HELLOWORLD_CONTACT_H
-#define HELLOWORLD_CONTACT_H
-
-
-#include <string>
+#ifndef PHONEBOOK_CONTACT_H
+#define PHONEBOOK_CONTACT_H
 #include <iostream>
 
 class Contact {
 private:
-    int         index;
-    std::string firstname;
-    std::string lastname;
-    std::string phone_number;
-    std::string darkest_secret;
+    std::string first_name;
+    std::string last_name;
+    std::string phone;
+    std::string email;
+    std::string secret;
 public:
+    int     index;
     Contact();
     virtual ~Contact();
-    void fillcontact();
-    void displaycontact();
+    void    add_contact();
+    void    display_contact();
 };
 
 
-#endif //HELLOWORLD_CONTACT_H
+#endif //PHONEBOOK_CONTACT_H
