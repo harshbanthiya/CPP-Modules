@@ -32,7 +32,7 @@ void Phonebook::display_contact_by_index(int index) {
     if (index >= 0 && index < MAX_LIMIT)
         contacts[index].display_contact_by_index();
     else
-        std::cout << "wrong index! out of range. Please try again!" << std::endl;
+        std::cout << "wrong index! out of range. Please try again!" << '\n';
 }
 
 void Phonebook::display_all_contacts(int display_index) {
