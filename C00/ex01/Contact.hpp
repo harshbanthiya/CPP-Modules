@@ -18,8 +18,8 @@ class Contact {
 private:
     std::string first_name;
     std::string last_name;
+    std::string nickname;
     std::string phone;
-    std::string email;
     std::string secret;
 public:
     int     index;
@@ -27,6 +27,7 @@ public:
     virtual ~Contact();
     void    add_contact(std::string (&contact_buff)[5]);
     void    display_contact();
+    void    display_contact_by_index();
 };
 
 

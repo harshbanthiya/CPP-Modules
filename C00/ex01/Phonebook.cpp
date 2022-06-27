@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "Phonebook.hpp"
-
+#include <iomanip>
 
 Phonebook::Phonebook() {
     current_index = -1;
@@ -28,16 +28,22 @@ void Phonebook::add_to_phonebook(int index, std::string (&contact_buff)[5])
     contacts[current_index].add_contact(contact_buff);
 }
 
-void Phonebook::display_all_contacts() {
-    int     i = 0;
-    while (i < MAX_LIMIT)
-        contacts[i++].display_contact();
-}
-
 void Phonebook::display_contact_by_index(int index) {
     if (index >= 0 && index < MAX_LIMIT)
-        contacts[index].display_contact();
+        contacts[index].display_contact_by_index();
     else
         std::cout << "wrong index! out of range. Please try again!" << std::endl;
+}
+
+void Phonebook::display_all_contacts(int display_index) {
+    int     i = 0;
+
+    std::cout << std::right << std::setw(10) << "Index" << " | " ;
+    std::cout << std::right << std::setw(10) << "First Name" << " | ";
+    std::cout << std::right << std::setw(10) << "Last Name" << " | ";
+    std::cout << std::right << std::setw(10) << "Nickname" << '\n';
+    while (i < display_index)
+        contacts[i++].display_contact();
+    
 }
 

@@ -14,7 +14,7 @@
 #ifndef PHONEBOOK_PHONEBOOK_H
 #define PHONEBOOK_PHONEBOOK_H
 #include "Contact.hpp"
-#define MAX_LIMIT 7
+#define MAX_LIMIT 8
 
 class Phonebook {
 private:
@@ -24,7 +24,7 @@ public:
     Phonebook();
     virtual ~Phonebook();
     void add_to_phonebook(int index, std::string (&contact_buff)[5]);
-    void display_all_contacts();
+    void display_all_contacts(int display_index);
     void display_contact_by_index(int index);
 };
 

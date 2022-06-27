@@ -35,9 +35,9 @@ int check_empty_fill_buff(std::string (&contact_buff)[5])
     std::getline(std::cin, contact_buff[0]);
     std::cout << "Enter Family Name" << '\n';
     std::getline(std::cin, contact_buff[1]);
-    std::cout << "Enter Phone Number" << '\n';
+    std::cout << "Enter Nick Name" << '\n';
     std::getline(std::cin, contact_buff[2]);
-    std::cout << "Enter Email"<< '\n';
+    std::cout << "Enter phone"<< '\n';
     std::getline(std::cin, contact_buff[3]);
     std::cout << "Enter secret" << '\n';
     std::getline(std::cin, contact_buff[4]);
@@ -56,7 +56,11 @@ int main() {
     Phonebook       phonebook;
     std::string     contact_buff[5];
     std::string     command;
+    int             display_index;
+    int             contact_index;
     i = 0;
+    display_index = 0;
+    contact_index = 0;
     prompt();
     while (1)
     {
@@ -67,64 +71,29 @@ int main() {
             {
                 if (i > MAX_LIMIT)
                     i = 0;
-            
                 if (check_empty_fill_buff(contact_buff))
                 {
                     phonebook.add_to_phonebook(i++, contact_buff);
                     std::cout << "Contact Created!" << '\n' ;
+                    if (display_index <= MAX_LIMIT)
+                        display_index++;
                 }
                 else 
                     std::cout << "empty field detected" << '\n';
             }
             if (command == "SEARCH")
             {
-                phonebook.display_all_contacts();
-         /*
-            //std::cout << "To see details of a particular contact type the INDEX_NUMBER or type BACK to go back" << std::endl;
-            //std::cin >> prompt;
-
-            while (1)
-            {
-                if (line == "BACK")
-                    break ;
-
-                if ( idx_prmpt >= ((int)std::stoi(prompt)) && idx_prmpt < ((int)(std::stoi(prompt) )))
-                {
-                    if (idx_prmpt >= 0 && idx_prmpt <= 0 + MAX_LIMIT )
-                        phonebook.display_contact_by_index(idx_prmpt);
-                    else
-                        continue ;
-                }
+                phonebook.display_all_contacts(display_index);
+                std::cout << "Enter the contact index to see complete details" << '\n';
+                std::cin >> contact_index;
+                phonebook.display_contact_by_index(contact_index);
             }
-         */    
-            }
+           
             if (command == "EXIT")
                 break ;
             
-        }
-        else 
-        {
-            std::cout << "You have entered a bad commnand or empty command, use ADD, SEARCH, EXIT only" << '\n';
         }
     }
 
     return 0;
 }
-/*
-int main()
-{
-    Phonebook Dir;
-    std::string line;
-
-    std::cout << "Enter your command: ";
-    while (1)
-    {
-        std::getline(std::cin, line);
-        if ( line == "ADD" || line == "add")
-            std::cout << "You have se";
-        if (line != "EXIT" || line != "exit")
-            break;
-    }
-    return (0);
- }
- */
