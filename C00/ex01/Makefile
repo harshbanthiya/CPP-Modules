@@ -1,0 +1,16 @@
+EXECUTABLE := ./phonebook
+SRCS := Contact.cpp Phonebook.cpp main.cpp 
+OBJS := $(SRCS:.cpp=.o)
+CPP_FLAGS := -Wall -Wextra -Werror -std=c++98 
+all : $(EXECUTABLE) clean 
+	@echo "Type ./phonebook - to access a command line phonebook"
+%.o : %.cpp
+	@$(CXX) $(CPP_FLAGS) -c $< -o $@
+$(EXECUTABLE): $(OBJS)
+	@$(CXX) $(CPP_FLAGS) $(OBJS) -o $(EXECUTABLE)
+clean : 
+	@rm -rf $(OBJS)
+fclean :
+	@rm -rf $(EXECUTABLE)
+re : fclean all 
+.PHONY: all clean fclean re 

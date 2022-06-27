@@ -1,0 +1,46 @@
+// 2 Classes  - Contact and Phonebook 
+/*  CRUD operations - Contact 
+    Create - Contact 
+    Read - Display Contact Info
+    Update - 
+    Delete - Contact 
+
+    CRUD OPERATIONS - Phonebook 
+    Create - Phonebook - Array of Contacts 
+    Read - Display all and Display by index 
+    Update - If Phone book full update first instead 
+    Delete - Phonebook 
+
+    At - Start - Users can enter one of three things ADD SEARCH AND EXIT 
+
+    ADD - Prompted to enter one field at a time - Once entered Contact is added to the pHonebook
+    First name , Last name, nickname, phone number, darkest secret. NO EMPTY FIELDS ALLOWED
+
+    SEARCH - Display Contacts as a list of 4 columns 
+            INDEX | FIRST NAME | LAST NAME | NICKNAME 
+            10 char wide each - Text right aligned - Text must be truncated and last char is . 
+            Prompt user again for index of entry to display. Index is wrong or out of range (error)
+            Otherwise display info one line at a time. 
+
+    EXIT - QUIT 
+*/
+
+
+First Task. 
+
+Make Phonebook and Contact fill up with 9 Contacts only. 
+-  Make classes 
+-  Check Prompt for only three entries otherwise error 
+-  Check for empty lines when adding contacts 
+
+
+Prompt -- 
+
+-- Welcome to this simple Phonebook Program!
+    --  You can save upto 8 contacts, After the 8th contact it will start to overwrite from the first one. 
+    --  Only three commands are accepted - ADD SEARCH EXIT -- Any other command entered will give you an error. 
+    >>  Please Type ADD to Add a contact - Please note, contact will not be saved if any field is left empty. 
+    >>  SEARCH to display all current contacts with index -- After search results are displayed -> You can enter the index to access individual contact details 
+    >>  Exit to exit the program, please note all the contact info will be lost as soon as you exit. 
+
+    >> Enter your command 
