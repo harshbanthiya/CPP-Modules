@@ -1,16 +1,16 @@
 EXECUTABLE := megaphone
 SRCS := megaphone.cpp 
-OBJS := $(SRCS:.cpp=.cpp.o)
+OBJS := $(SRCS:.cpp=.o)
 CPP_FLAGS := -Wall -Wextra -Werror -std=c++98
-all : $(EXECUTABLE) clean 
+all : $(EXECUTABLE) 
 	@echo "Usage: ./megaphone || ./megaphone args1 args2 ..."
 $(OBJS) : $(SRCS)
-	@$(CXX) $(CPP_FLAGS) -c $< -o $@
+	@c++ $(CPP_FLAGS) -c $< -o $@
 $(EXECUTABLE): $(OBJS)
-	@$(CXX) $(CPP_FLAGS) $(OBJS) -o $(EXECUTABLE)
+	@c++ $(CPP_FLAGS) $(OBJS) -o $(EXECUTABLE)
 clean : 
 	@rm -rf $(OBJS)
-fclean :
+fclean : clean 
 	@rm -rf $(EXECUTABLE)
 re : fclean all 
 .PHONY: all clean fclean re 
