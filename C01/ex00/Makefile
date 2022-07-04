@@ -6,7 +6,7 @@
 #    By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/04 10:53:06 by hbanthiy          #+#    #+#              #
-#    Updated: 2022/07/04 13:31:35 by hbanthiy         ###   ########.fr        #
+#    Updated: 2022/07/04 13:33:46 by hbanthiy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,10 +28,10 @@ all: $(NAME)
 		@echo "Type ./zombie00 - to run the program, tests are in the main file"
 
 clean:
-		@rm -rf $(OBJS_DIR) $(OBJS)
+		rm -rf $(OBJS_DIR) $(OBJS)
 
 fclean:	clean
-		@rm -rf $(NAME)
+		rm -rf $(NAME)
 	
 re:			fclean all
 
