@@ -8,6 +8,6 @@ int main() {
     heapy->announce();
     randomChump("chumpstack");
     delete(heapy);
-    std::cout << "Zombie deleted from heap" << std::endl;
+    std::cout << "Zombie deleted from heap" << '\n';
     return 0;
 }
