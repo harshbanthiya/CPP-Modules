@@ -6,14 +6,14 @@
 #    By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/04 10:53:06 by hbanthiy          #+#    #+#              #
-#    Updated: 2022/07/04 13:34:47 by hbanthiy         ###   ########.fr        #
+#    Updated: 2022/07/04 15:26:38 by hbanthiy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := c++
 CPPFLAGS := -Wall -Wextra -Werror -std=c++98
-NAME :=	zombie00
-SRCS :=	main.cpp newZombie.cpp Zombie.cpp randomChump.cpp
+NAME :=	zombie01
+SRCS :=	main.cpp Zombie.cpp zombieHorde.cpp
 OBJS_DIR := object_files
 OBJS := $(addprefix $(OBJS_DIR)/,$(SRCS:.cpp=.o))
 
@@ -25,7 +25,7 @@ $(NAME): $(OBJS)
 		@$(CC) $(CPPFLAGS) $(OBJS) -o $(NAME)
 		
 all: $(NAME)
-		@echo "Type ./zombie00 - to run the program, tests are in the main file"
+		@echo "Type ./zombie01 - to run the program, tests are in the main file"
 
 clean:
 		rm -rf $(OBJS_DIR) $(OBJS)
