@@ -3,12 +3,13 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hbanthiy <marvin@42quebec.com>             +#+  +:+       +#+         #
+#    By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/06/28 15:30:58 by hbanthiy          #+#    #+#              #
-#    Updated: 2022/07/04 10:43:52 by hbanthiy         ###   ########.fr        #
+#    Created: 2022/07/04 10:53:06 by hbanthiy          #+#    #+#              #
+#    Updated: 2022/07/04 10:53:09 by hbanthiy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 NAME = 		zombie00
 
