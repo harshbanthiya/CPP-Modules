@@ -6,14 +6,18 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 13:36:10 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/04 13:36:21 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/04 15:53:43 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#ifndef UNNECESSARY_VIOLENCE_WEAPON_H
-#define UNNECESSARY_VIOLENCE_WEAPON_H
+#ifndef WEAPON_H
+#define WEAPON_H
 #include <iostream>
+
+#define RESET   "\033[0m"
+#define RED     "\033[31m"      /* Red */
+#define GREEN   "\033[32m"      /* Green */
 
 class Weapon {
 private:

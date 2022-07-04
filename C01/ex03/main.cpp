@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 13:36:57 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/04 13:36:58 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/04 15:47:07 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "Weapon.h"
 #include "HumanA.h"
 #include "HumanB.h"
+
 int main() {
         {
             Weapon club = Weapon("crude spiked club");

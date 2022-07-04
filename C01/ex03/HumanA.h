@@ -6,14 +6,14 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 13:37:17 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/04 13:37:22 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/04 15:53:28 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 
-#ifndef UNNECESSARY_VIOLENCE_HUMANA_H
-#define UNNECESSARY_VIOLENCE_HUMANA_H
+#ifndef HUMANA_H
+#define HUMANA_H
 #include "Weapon.h"
 
 class HumanA {
