@@ -6,34 +6,32 @@
 #    By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/04 10:53:06 by hbanthiy          #+#    #+#              #
-#    Updated: 2022/07/04 10:53:09 by hbanthiy         ###   ########.fr        #
+#    Updated: 2022/07/04 13:31:35 by hbanthiy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+CC := c++
+CPPFLAGS := -Wall -Wextra -Werror -std=c++98
+NAME :=	zombie00
+SRCS :=	main.cpp newZombie.cpp Zombie.cpp randomChump.cpp
+OBJS_DIR := object_files
+OBJS := $(addprefix $(OBJS_DIR)/,$(SRCS:.cpp=.o))
 
-NAME = 		zombie00
+$(OBJS_DIR)/%.o: %.cpp
+		@mkdir -p $(OBJS_DIR)
+		@$(CC) $(CPPFLAGS) -o $@ -c $^
 
-SRCS =		main.cpp newZombie.cpp Zombie.cpp randomChump.cpp 
-CC =		c++
-CPPFLAGS = 	-Wall -Wextra -Werror -std=c++98
-OBJS = 		${SRCS:.cpp=.o}
-INCS =		-I .
-
-
-%.o: %.cpp
-		@${CC} ${CPPFLAGS} ${INCS} -c $< -o $@
-
-${NAME}: ${OBJS}
-		@${CC} ${CPPFLAGS} -o ${NAME} ${INCS} ${OBJS}
+$(NAME): $(OBJS)
+		@$(CC) $(CPPFLAGS) $(OBJS) -o $(NAME)
+		
+all: $(NAME)
 		@echo "Type ./zombie00 - to run the program, tests are in the main file"
-				
-all:	${NAME}
 
 clean:
-		@rm -rf ${OBJS}
+		@rm -rf $(OBJS_DIR) $(OBJS)
 
 fclean:	clean
-		@rm -rf ${NAME}
+		@rm -rf $(NAME)
 	
 re:			fclean all
 
