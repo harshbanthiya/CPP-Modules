@@ -1,6 +1,16 @@
-//
-// Created by Hersh Banthiya on 2022-05-20.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   HumanA.h                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/04 13:37:17 by hbanthiy          #+#    #+#             */
+/*   Updated: 2022/07/04 13:37:22 by hbanthiy         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
 
 #ifndef UNNECESSARY_VIOLENCE_HUMANA_H
 #define UNNECESSARY_VIOLENCE_HUMANA_H
@@ -18,4 +28,4 @@ public:
 };
 
 
-#endif //UNNECESSARY_VIOLENCE_HUMANA_H
+#endif 

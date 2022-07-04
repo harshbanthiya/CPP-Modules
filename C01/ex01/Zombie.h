@@ -1,6 +1,15 @@
-//
-// Created by Hersh Banthiya on 2022-05-19.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Zombie.h                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/04 13:37:54 by hbanthiy          #+#    #+#             */
+/*   Updated: 2022/07/04 13:38:09 by hbanthiy         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 #ifndef ZOMBIE_ZOMBIE_H
 #define ZOMBIE_ZOMBIE_H
@@ -18,4 +27,4 @@ public:
 Zombie* zombieHorde( int N, std::string name );
 
 
-#endif //ZOMBIE_ZOMBIE_H
+#endif
