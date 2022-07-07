@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 16:36:15 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/05 13:06:29 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/07 11:25:24 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,9 @@ void    find_and_replace(std::string line, std::string s1, std::string s2, std::
       
         
         str_pos_found = line.find(s1);
-        while (str_pos_found != -1)
+        while (str_pos_found != std::string::npos)
         {
-            //std::cout << GREEN << "first string match found at: " << str_pos_found << RESET << '\n';
             line = replace_str(line, s1, s2, str_pos_found );
-           // outfile << line << '\n';
             str_pos_found = line.find(s1);
         }
         outfile << line << '\n';
@@ -49,34 +47,38 @@ void    find_and_replace(std::string line, std::string s1, std::string s2, std::
 
 int main(int argc, char **argv)
 {
+    
+    if (argc != 4 || std::strlen(argv[1]) == 0 || std::strlen(argv[2]) == 0 || std::strlen(argv[3]) == 0)
+    {
+        std::cout << RED << "Error! Corrent usage: ./sed filename string_to_find string_to_replace" <<  RESET << '\n';
+        return (1);
+    }
+    
     int             i;
     std::fstream    filestream;
     std::string     line;
     std::string     file_name_replace;
     
     i = 0;
-    if (argc == 4)
+    filestream.open(argv[1], std::fstream::in);
+    if (filestream.fail())
     {
-        filestream.open(argv[1], std::fstream::in);
-        if(filestream.is_open())
-        {
-            file_name_replace = argv[1] + (std::string)".replace";
-            std::ofstream   outfile(file_name_replace);
-            while (std::getline(filestream, line))
-            {
-               find_and_replace(line, argv[2], argv[3], outfile);
-            }   
-            outfile.close();   
-            filestream.close();
-        }
-        else
-            std::cout << RED << "Unable to open file" << RESET << '\n';
+        std::cout << RED << "Error! Cannot open file: " << argv[1] << RESET << '\n';
+        return (1);
     }
-    else 
+    file_name_replace = argv[1] + (std::string)".replace";
+    std::ofstream   outfile(file_name_replace);
+    if (outfile.fail())
     {
-        std::cout << "Not enough or more " << '\n';
+        std::cout << RED << "Error! Cannot create replace file: " << file_name_replace << RESET <<'\n';
+        return (1);
     }
+    while (std::getline(filestream, line))
+    {
+        find_and_replace(line, argv[2], argv[3], outfile);
+    }   
+    outfile.close();   
+    filestream.close();
     
-
     return (0);
 }

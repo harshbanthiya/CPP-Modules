@@ -6,13 +6,13 @@
 #    By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/04 10:53:06 by hbanthiy          #+#    #+#              #
-#    Updated: 2022/07/04 16:36:02 by hbanthiy         ###   ########.fr        #
+#    Updated: 2022/07/07 11:28:42 by hbanthiy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := c++
 CPPFLAGS := -Wall -Wextra -Werror -std=c++98
-NAME :=	SedEx04
+NAME :=	sed
 SRCS :=	main.cpp 
 OBJS_DIR := object_files
 OBJS := $(addprefix $(OBJS_DIR)/,$(SRCS:.cpp=.o))
@@ -25,7 +25,7 @@ $(NAME): $(OBJS)
 		@$(CC) $(CPPFLAGS) $(OBJS) -o $(NAME)
 		
 all: $(NAME)
-		@echo "Type ./SedEx04 - to run the program, tests are in the main file"
+		@echo "Type ./sed filename string_to_find string_to_replace"
 
 clean:
 		rm -rf $(OBJS_DIR) $(OBJS)
