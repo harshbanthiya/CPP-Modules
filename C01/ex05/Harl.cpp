@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/05 13:11:01 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/05 16:29:02 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/07 11:00:19 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,18 +41,17 @@ void Harl::error(void)
 
 void Harl::complain(std::string level)
 {
-    int     i = 0;
-    t_level  func_ptr[4] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+ 
+    t_level  func_ptr[4] = {{&Harl::debug}, {&Harl::info}, {&Harl::warning} , {&Harl::error}};
     std::string str_l[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
-    while(i < 4)
+    for (int i = 0; i < 4; i++)
     {
         if (level == str_l[i])
         {
             (this->*(func_ptr[i].f))();
             return ;
         }
-        i++;
     } 
     std::cout << "Invalid level!" << '\n';
 }
