@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 15:57:42 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/08 17:59:59 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/08 18:08:13 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,16 @@ class Fixed
     int toInt(void) const;
     // Output stream
     friend std::ostream& operator<< (std::ostream& out, const Fixed& f);
+    
+    // Comparison and Relational Operators 
+    bool operator<(const Fixed& rhs) const;
+    bool operator>(const Fixed& rhs) const;
+    bool operator<=(const Fixed& rhs) const;
+    bool operator>=(const Fixed& rhs) const;
+    bool operator==(const Fixed& rhs) const;
+    bool operator!=(const Fixed& rhs) const;
+
+    
+
 };
   
