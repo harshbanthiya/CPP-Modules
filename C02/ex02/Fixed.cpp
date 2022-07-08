@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 15:57:44 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/08 18:08:13 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/08 18:56:19 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void Fixed::setRawBits(int const raw)
     fixed_point_number_value = raw;
 }
 
-int Fixed::getRawBits(void)
+int Fixed::getRawBits(void) const 
 {
     std::cout << "getRawBits member function called" << '\n';
     return (fixed_point_number_value);
@@ -105,3 +105,48 @@ std::ostream& operator<< (std::ostream& out, const Fixed& f)
     return out;
 }
 
+Fixed Fixed::operator+(const Fixed& rhs) const
+{
+    return (Fixed(this->toFloat() + rhs.toFloat()));
+}
+
+Fixed Fixed::operator-(const Fixed& rhs) const
+{
+    return (Fixed(this->toFloat() - rhs.toFloat()));
+}
+
+Fixed Fixed::operator*(const Fixed& rhs) const
+{
+    return (Fixed(this->toFloat() * rhs.toFloat()));
+}
+
+Fixed Fixed::operator/(const Fixed& rhs) const
+{
+    return (Fixed(this->toFloat() / rhs.toFloat()));
+}
+
+Fixed& Fixed::min(Fixed& a, Fixed& b)
+{
+    return ((a < b) ? a : b);
+}
+
+Fixed& Fixed::max(Fixed& a, Fixed& b)
+{
+    return ((a > b) ? a : b);
+}
+
+const Fixed& Fixed::min(const Fixed& a, const Fixed& b)
+{
+    if (a.getRawBits() < b.getRawBits()) 
+        return  a; 
+    else 
+        return  b;
+}
+
+const Fixed& Fixed::max(const Fixed& a, const Fixed& b)
+{
+    if (a.getRawBits() > b.getRawBits()) 
+        return  a; 
+    else 
+        return  b;
+}

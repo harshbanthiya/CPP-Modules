@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 15:57:42 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/08 18:08:13 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/08 18:54:19 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Fixed
     Fixed(const Fixed& f); //copy constructor 
     Fixed& operator=(const Fixed& f); // assignment operator 
     void setRawBits(int const raw);
-    int getRawBits(void);
+    int getRawBits(void) const ;
     float toFloat(void) const;
     int toInt(void) const;
     // Output stream
@@ -40,7 +40,22 @@ class Fixed
     bool operator==(const Fixed& rhs) const;
     bool operator!=(const Fixed& rhs) const;
 
+    //Arthemetic Operators 
+
+    Fixed operator+(const Fixed& rhs)const;
+    Fixed operator-(const Fixed& rhs)const;
+    Fixed operator*(const Fixed& rhs)const;
+    Fixed operator/(const Fixed& rhs)const;
+
+    // Pre increment and Post Increment 
+
     
+
+    // Min max 
+    Fixed& min(Fixed& a, Fixed& b);
+    Fixed& max(Fixed& a, Fixed& b);
+    static const Fixed& min(const Fixed& a, const Fixed& b);
+    static const Fixed& max(const Fixed& a, const Fixed& b);
 
 };
   
