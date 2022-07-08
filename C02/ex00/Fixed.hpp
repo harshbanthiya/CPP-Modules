@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 15:57:42 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/08 16:36:48 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/08 16:54:13 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@ class Fixed
     public:
     Fixed();
     ~Fixed();
-    Fixed(const Fixed& f); //copy constructor 
-    Fixed& operator=(const Fixed& f); // assignment operator 
     void setRawBits(int const raw);
     int getRawBits(void);
+    Fixed(const Fixed& f); //copy constructor 
+    Fixed& operator=(const Fixed& f); // assignment operator 
 };
+  
