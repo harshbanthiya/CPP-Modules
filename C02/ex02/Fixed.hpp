@@ -6,17 +6,18 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 15:57:42 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/08 18:54:19 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/11 13:50:56 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <cmath>
 
 class Fixed
 {
     private:
     float             fixed_point_number_value;
-    static const int    number_of_fractional_bits = 8;
+    static const int    number_of_fractional_bits;
     
     public:
     Fixed();
@@ -48,7 +49,10 @@ class Fixed
     Fixed operator/(const Fixed& rhs)const;
 
     // Pre increment and Post Increment 
-
+    Fixed operator++(int) ;
+    Fixed operator++(void) ;
+    Fixed operator--(void) ;
+    Fixed operator--(int) ;
     
 
     // Min max 

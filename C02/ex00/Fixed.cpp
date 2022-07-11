@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 15:57:44 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/08 17:07:26 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/11 13:19:46 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,27 +21,26 @@ Fixed::~Fixed(){
     std::cout << "Destructor called" << '\n';
 }
 
-Fixed::Fixed(const Fixed& f) : fixed_point_number_value(f.fixed_point_number_value)
+Fixed::Fixed(const Fixed& f)
 {
+    *this = f;
     std::cout << "Copy Constructor called" << '\n';
 }
 
 Fixed& Fixed::operator=(const Fixed& f)
 {
     std::cout << "Copy Assignment Constructor called" << '\n';
-    if (this == &f)
-        return (*this);
-    fixed_point_number_value = f.fixed_point_number_value;
+    this->fixed_point_number_value = f.getRawBits();
     return (*this);
 }
 
 void Fixed::setRawBits(int const raw)
 {
-    fixed_point_number_value = raw;
+    this->fixed_point_number_value = raw;
 }
 
-int Fixed::getRawBits(void)
+int Fixed::getRawBits(void) const 
 {
     std::cout << "getRawBits member function called" << '\n';
-    return (fixed_point_number_value);
+    return (this->fixed_point_number_value);
 }
