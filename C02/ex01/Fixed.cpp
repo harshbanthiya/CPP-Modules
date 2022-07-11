@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 15:57:44 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/11 13:41:04 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/11 15:03:28 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ Fixed::Fixed(const Fixed& f)
 
 Fixed& Fixed::operator=(const Fixed& f)
 {
-    std::cout << "Copy Assignment Constructor called" << '\n';
+    std::cout << "Copy Assignment Operator called" << '\n';
     this->fixed_point_number_value = f.getRawBits();
     return (*this);
 }
