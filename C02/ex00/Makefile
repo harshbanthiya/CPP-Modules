@@ -5,21 +5,21 @@
 #                                                     +:+ +:+         +:+      #
 #    By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/07/08 15:46:06 by hbanthiy          #+#    #+#              #
-#    Updated: 2022/07/11 15:01:51 by hbanthiy         ###   ########.fr        #
+#    Created: 2022/07/04 10:53:06 by hbanthiy          #+#    #+#              #
+#    Updated: 2022/07/11 15:01:07 by hbanthiy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := c++
 CPPFLAGS := -Wall -Wextra -Werror -std=c++98
-NAME :=	ex01
+NAME :=	ex00
 SRCS :=	main.cpp Fixed.cpp 
 OBJS_DIR := object_files
 OBJS := $(addprefix $(OBJS_DIR)/,$(SRCS:.cpp=.o))
 
 all: $(NAME)
-		@echo "Type ./ex01 - to run the program, tests are in the main file"
-
+		@echo "Type ./ex00 - to run the program, tests are in the main file"
+		
 $(OBJS_DIR)/%.o: %.cpp
 		@mkdir -p $(OBJS_DIR)
 		@$(CC) $(CPPFLAGS) -o $@ -c $^
