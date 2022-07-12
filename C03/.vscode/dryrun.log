@@ -1,0 +1,6 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory `/Users/sheeed/CPP-Modules/C03'
+make: Leaving directory `/Users/sheeed/CPP-Modules/C03'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
