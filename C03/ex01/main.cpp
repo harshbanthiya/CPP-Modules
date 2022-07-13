@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 12:45:16 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/13 10:51:08 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/13 14:09:43 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main()
     ClapTrap A("Wimbledon Naked Streaker!");
     ScavTrap he("Hello");
     
-    A.setAttackDamage(1);
+    A.setAttackDamage(10);
     he.setAttackDamage(4);
 
     for(int i = 0 ; i < 5; i++)
@@ -27,6 +27,7 @@ int main()
         he.attack("Wimbledon Naked Streaker!");
         A.takeDamage(he.getAttackDamage());
         A.beRepaired(1);
+        he.guardGate();
     }
     
     

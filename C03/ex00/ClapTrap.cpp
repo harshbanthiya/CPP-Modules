@@ -6,16 +6,25 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 12:45:08 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/12 15:29:00 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/13 14:29:34 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 // Constructors and Destructors 
-ClapTrap::ClapTrap() : Name("UNKNOWN"), HitPoints(10), EnergyPoints(10), AttackDamage(0){std::cout << Name << " Constructor Called!" << '\n';}
-ClapTrap::ClapTrap(std::string n) : Name(n) , HitPoints(10) , EnergyPoints(10), AttackDamage(0){std::cout << Name << " Constructor Called!" << '\n';}
-ClapTrap::~ClapTrap(){std::cout << Name << " Destructor Called!" << '\n';}
+ClapTrap::ClapTrap() : Name("UNKNOWN"), HitPoints(10), EnergyPoints(10), AttackDamage(0)
+{
+    std::cout << YELLOW << Name << " ClapTrap " << RESET << GREEN << " Constructor Called!" << RESET << '\n';
+}
+ClapTrap::ClapTrap(std::string n) : Name(n) , HitPoints(10) , EnergyPoints(10), AttackDamage(0)
+{
+    std::cout << YELLOW << Name << " ClapTrap " << RESET << GREEN << " Constructor Called!" << RESET << '\n';
+}
+ClapTrap::~ClapTrap()
+{
+    std::cout << YELLOW << Name << RESET << RED << " Destructor Called!" <<  RESET << '\n';
+}
 ClapTrap::ClapTrap(const ClapTrap& n){*this = n;}
 
 // Getters and Setters
@@ -42,12 +51,12 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& n)
 void ClapTrap::attack(const std::string& target)
 {
     if (this->getHitPoints() < 1)
-        std::cout << "Clap Trap " << Name << " cannot attack as it is dead!" << '\n';
+        std::cout << YELLOW << "Clap Trap " << Name << RESET << " cannot attack as it is dead!" << '\n';
     if (this->getEnergyPoints() < 1)
-        std::cout << "Clap Trap " << Name << " cannot attack as it has no energy left" << '\n';
+        std::cout << YELLOW << "Clap Trap " << Name << RESET << " cannot attack as it has no energy left" << '\n';
     else 
     {
-        std::cout << "ClapTrap " << Name << " attacks " << target << ", causing "  << AttackDamage << " points of damage!" << '\n';
+        std::cout << YELLOW << "ClapTrap " << Name << RESET << " attacks " << target << ", causing "  << AttackDamage << " points of damage!" << '\n';
         this->setEnergyPoints(this->getEnergyPoints() - 1);
     }
 }
@@ -55,33 +64,33 @@ void ClapTrap::attack(const std::string& target)
 void ClapTrap::takeDamage(unsigned int amount)
 {
     if (!amount)
-        std::cout << "ClapTrap takes no damage as 0 damage is not useful " << '\n';
+        std::cout << YELLOW << "ClapTrap " << Name << RESET << "takes no damage as 0 damage is not useful " << '\n';
     if (this->getHitPoints() < 1)
-        std::cout << "ClapTrap cannot take " << amount << " damage because it is already dead" << '\n';
+        std::cout << YELLOW << "ClapTrap " << Name << RESET " cannot take " << amount << " damage because it is already dead" << '\n';
     else 
     {
         if (this->getHitPoints() - (int)amount <= 0)
             amount = this->getHitPoints();
         this->setHitPoints(getHitPoints() - amount);
         if (!getHitPoints())
-            std::cout << "ClapTrap cannot take " <<  amount << " damage because it just lost its life" << '\n';
+            std::cout << YELLOW << "ClapTrap " << Name << RESET " cannot take " <<  amount << " damage because it just lost its life" << '\n';
         else 
-            std::cout << "ClapTrap " << Name << " takes " << amount << " points of damage!" << '\n';
+            std::cout << YELLOW << "ClapTrap " << Name  << RESET << " takes " << amount << " points of damage!" << '\n';
     }
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
     if (!amount)
-         std::cout << "ClapTrap makes no repair as 0 repair is not useful " << '\n';
+        std::cout << YELLOW << "ClapTrap " << Name << RESET << "makes no repair as 0 repair is not useful " << '\n';
     if (this->getHitPoints() < 1)
-        std::cout << "Clap Trap " << Name << " cannot repair as it is dead!" << '\n';
+        std::cout << YELLOW << "Clap Trap " << Name << RESET << " cannot repair as it is dead!" << '\n';
     if (this->getEnergyPoints() < 1)
-        std::cout << "Clap Trap " << Name << " cannot repair as it has no energy left" << '\n';
+        std::cout << YELLOW << "Clap Trap " << Name << RESET << " cannot repair as it has no energy left" << '\n';
     else
     {
         this->setHitPoints(this->getHitPoints() + amount);
         this->setEnergyPoints(this->getEnergyPoints() - 1);
-        std::cout << "ClapTrap " << Name << " repairs " << amount << ", causing points of repair!" << '\n';
+        std::cout << YELLOW << "ClapTrap " << Name << RESET <<  " repairs " << amount << ", causing points of repair!" << '\n';
     }     
 }
