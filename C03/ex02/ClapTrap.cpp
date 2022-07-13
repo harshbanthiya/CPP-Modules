@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 12:45:08 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/13 14:39:47 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/13 15:22:27 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ void        ClapTrap::setAttackDamage(int const v){this->AttackDamage = v;}
 // Assignment Operator 
 ClapTrap& ClapTrap::operator=(const ClapTrap& n)
 {
+    if (this == &n)
+        return (*this);
     this->HitPoints = n.HitPoints;
     this->AttackDamage = n.AttackDamage;
     this->EnergyPoints = n.EnergyPoints;

@@ -6,14 +6,14 @@
 #    By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/08 15:46:01 by hbanthiy          #+#    #+#              #
-#    Updated: 2022/07/13 14:44:18 by hbanthiy         ###   ########.fr        #
+#    Updated: 2022/07/13 15:24:52 by hbanthiy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := c++
 CPPFLAGS := -Wall -Wextra -Werror -std=c++98
 NAME :=	FragTrap
-SRCS :=	main.cpp ClapTrap.cpp FragTrap.cpp
+SRCS :=	main.cpp ClapTrap.cpp FragTrap.cpp ScavTrap.cpp
 OBJS_DIR := object_files
 OBJS := $(addprefix $(OBJS_DIR)/,$(SRCS:.cpp=.o))
 

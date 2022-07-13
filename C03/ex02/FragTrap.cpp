@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 14:44:50 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/13 14:52:12 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/13 15:21:50 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ FragTrap::FragTrap(const std::string name) :
 
 FragTrap& FragTrap::operator=(const FragTrap& n)
 {
+    if (this == &n)
+        return (*this);
     this->Name = n.Name;
     this->HitPoints = n.HitPoints;
     this->AttackDamage = n.AttackDamage;
