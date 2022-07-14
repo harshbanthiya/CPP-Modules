@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/13 10:18:35 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/14 11:40:17 by hbanthiy         ###   ########.fr       */
+/*   Created: 2022/07/14 09:42:09 by hbanthiy          #+#    #+#             */
+/*   Updated: 2022/07/14 13:28:39 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#ifndef DOG_HPP
+# define DOG_HPP
 
-class ScavTrap : public ClapTrap
+# include "Animal.hpp"
+# include "Brain.hpp"
+class Dog : public Animal
 {
-    public:
-    ScavTrap();
-    ScavTrap(const std::string name);
-    ~ScavTrap();
-    ScavTrap(const ScavTrap &n);
-    ScavTrap& operator=(const ScavTrap& n);
-    
-    void attack(const std::string& target);
-    void guardGate(void);
+	private:
+	Brain 	*b;
+	
+	public:
+
+		Dog();
+		Dog( Dog const & src );
+		virtual ~Dog();
+
+		Dog& 		operator=(const Dog& n);
+		void 		makeSound(void) const ;
+		std::string 	getIdea(unsigned int id) const;
+		void 			setIdea(unsigned int id, const std::string val);
 
 };
+
+
+
+#endif

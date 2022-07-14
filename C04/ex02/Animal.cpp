@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 09:38:42 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/14 14:12:02 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/14 14:12:52 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,12 @@ Animal& Animal::operator=(const Animal& n)
     return (*this);
 }
 
-std::string 	Animal::getType(void) const
-{
-	return (this->type);
-}
-
 void 		Animal::makeSound(void) const 
 {
 	std::cout << BLUE << type << RESET << " Animal Noises" << '\n';
+}
+
+std::string 	Animal::getType(void) const
+{
+	return (this->type);
 }
