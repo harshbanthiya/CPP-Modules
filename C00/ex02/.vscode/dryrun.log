@@ -1,0 +1,8 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/sheeed/CPP-Modules/C00/ex02'
+c++ -Wall -Wextra -Werror -std=c++98 -I . -c tests.cpp -o tests.o
+c++ -Wall -Wextra -Werror -std=c++98 -I . -c Account.cpp -o Account.o
+c++ -Wall -Wextra -Werror -std=c++98 -o dream_job -I . tests.o Account.o
+echo "Type ./dreamjob - to compare output with log.txt"
+make: Leaving directory `/Users/sheeed/CPP-Modules/C00/ex02'
+ 
