@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 12:45:16 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/14 13:41:39 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/14 14:37:23 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main()
 {
     Dog a,b,c;
     Cat d,e,f;
-    Animal arr[10] = { a, b, c, d, e, f};  
+    //Animal arr[10] = { a, b, c, d, e, f};  
 
     Dog* jj = new Dog();
     Cat* ii = new Cat();
