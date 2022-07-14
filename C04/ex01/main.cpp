@@ -10,44 +10,52 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
-#include "Cat.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
 #include "Dog.hpp"
+#include "Brain.hpp"
+#include "Cat.hpp"
 
-int main()
+# define ANIMAL_ARR 10
+
+int	main(void)
 {
-    Dog a,b,c;
-    Cat d,e,f;
-    Animal arr[10] = { a, b, c, d, e, f};  
+	Animal* arr[ANIMAL_ARR];
 
-    Dog* jj = new Dog();
-    Cat* ii = new Cat();
+	for (int i = 0; i < ANIMAL_ARR; i++)
+	{
+		if ((i % 2) == 0)
+			arr[i] = new Dog();
+		else
+			arr[i] = new Cat();
+	}
 
-    a.makeSound();
-    a.setIdea(0, "Need Tennis Ball, Play Now!");
-    std::cout  << "Current Idea: " << a.getIdea(0) << '\n';
-    
-    b.makeSound();
-    b.setIdea(0, "Finally I feel good, gonna catch my Tail TODAY!");
-    std::cout  << "Current Idea: " << b.getIdea(0) << '\n';
+	std::cout << '\n';
 
-    d.makeSound();
-    d.setIdea(0, "Why isnt this Human not cleaning my litter, incompetent!");
-    std::cout << "Current Idea: " <<  d.getIdea(0) << '\n';
+	for (int i = 0; i < ANIMAL_ARR; i++)
+		std::cout << "This animal is a " << arr[i]->getType() << "." << '\n';
 
-    ii->makeSound();
-    ii->setIdea(0, "Worship me or you will see my asshole again!");
-    std::cout << "Current Idea: " <<  ii->getIdea(0) << '\n';
-    
-    jj->makeSound();
-    jj->setIdea(0, "Walk Now !! Play Now !! TREATS YESSSSSS!");
-    std::cout << "Current Idea: " <<  jj->getIdea(0) << '\n';
+	std::cout << '\n';
 
-    delete jj;
-    delete ii;
-    
-    return 0;
+	for (int i = 0; i < ANIMAL_ARR; i++)
+		delete (arr[i]);
 
+	std::cout << '\n';
+
+	Animal* cat = new Cat();
+	std::string s1 = "Worship me or you will see my Asshole again!";
+	std::string s2 = "Stop watching TV and clean my litter";
+
+	cat->setIdea(2, s2);
+	cat->setIdea(67, s1);
+	cat->setIdea(33, s2);
+
+	std::cout << "Idea n.2 is " << cat->getIdea(2) << '\n';
+	std::cout << "Idea n.67 is " << cat->getIdea(67) << '\n';
+	std::cout << "Idea n.33 is " << cat->getIdea(33) << '\n';
+	std::cout << "Idea n.1 is " << cat->getIdea(1) << '\n';
+
+	delete (cat);
+
+	std::cout << '\n';
+
+	return (0);
 }

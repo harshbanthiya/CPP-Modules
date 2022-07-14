@@ -38,7 +38,7 @@ Brain& Brain::operator=(const Brain& n)
 
 std::string 	Brain::getIdea(unsigned int id) const
 {
-	if (id > MAX_IDEAS)
+	if (id >= MAX_IDEAS)
 	{
 		std::cout << "Idea out of range \n";
 		return (0);
@@ -49,7 +49,7 @@ std::string 	Brain::getIdea(unsigned int id) const
 
 void 			Brain::setIdea(unsigned int id, const std::string val)
 {
-	if (id >= 0 && id < MAX_IDEAS)
+	if (id >= 0 && id <= MAX_IDEAS)
 		this->ideas[id] = val;
 	else 
 		return ;
