@@ -51,7 +51,7 @@ int	main(void)
 	std::cout << "Idea n.2 is " << cat->getIdea(2) << '\n';
 	std::cout << "Idea n.67 is " << cat->getIdea(67) << '\n';
 	std::cout << "Idea n.33 is " << cat->getIdea(33) << '\n';
-	std::cout << "Idea n.1 is " << cat->getIdea(1) << '\n';
+	//std::cout << "Idea n.1 is " << cat->getIdea(1) << '\n';
 
 	delete (cat);
 
