@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 12:53:47 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/14 13:31:27 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/14 14:42:21 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,14 @@ Brain& Brain::operator=(const Brain& n)
 {
     if (this == &n)
         return (*this);
-	for (int i = 0; i < MAX_IDEAS; i++)
+	for (int i = 0; i <= MAX_IDEAS; i++)
 		this->ideas[i] = n.ideas[i];
     return (*this);
 }
 
 std::string 	Brain::getIdea(unsigned int id) const
 {
-	if (id >= MAX_IDEAS)
+	if (id > MAX_IDEAS)
 	{
 		std::cout << "Idea out of range \n";
 		return (0);
