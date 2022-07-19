@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sheeed <sheeed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 13:44:56 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/15 15:21:40 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/19 11:32:13 by sheeed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <iostream>
 # include <string>
 # include <exception>
+# include "Form.hpp"
 
 class Bureaucrat
 {
@@ -44,6 +45,7 @@ class Bureaucrat
 		unsigned int 	getGrade(void) const;		
 		void 			incrementGrade(void);
 		void 			decrementGrade(void);
+		void 			signForm(Form &n);
 		friend std::ostream& operator<< (std::ostream& out, const Bureaucrat& f);
 };
 
