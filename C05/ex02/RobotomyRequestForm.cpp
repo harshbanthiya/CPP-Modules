@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/15 15:02:43 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/19 14:36:37 by hbanthiy         ###   ########.fr       */
+/*   Created: 2022/07/19 13:35:20 by hbanthiy          #+#    #+#             */
+/*   Updated: 2022/07/19 13:59:19 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
-#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
 
-
-int main()
+RobotomyRequestForm::RobotomyRequestForm () : Form("Unknown", false, 72, 45)
 {
-    Bureaucrat A;
-   
-    PresidentialPardonForm B;
-   
-    std::cout << B << '\n';      
-    B.execute(A);
     
-    return (0);
+}  
+RobotomyRequestForm::RobotomyRequestForm(std::string target) : Form(target, false, 72, 45)
+{
+
 }
+
+RobotomyRequestForm::~RobotomyRequestForm()
+{
+    
+}
+

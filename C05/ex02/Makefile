@@ -6,14 +6,14 @@
 #    By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/15 13:43:17 by hbanthiy          #+#    #+#              #
-#    Updated: 2022/07/19 12:42:30 by hbanthiy         ###   ########.fr        #
+#    Updated: 2022/07/19 14:35:04 by hbanthiy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := c++
 CPPFLAGS := -Wall -Wextra -Werror -std=c++98
 NAME :=	ex02
-SRCS :=	main.cpp Bureaucrat.cpp Form.cpp
+SRCS :=	main.cpp Bureaucrat.cpp Form.cpp PresidentialPardonForm.cpp
 OBJS_DIR := object_files
 OBJS := $(addprefix $(OBJS_DIR)/,$(SRCS:.cpp=.o))
 

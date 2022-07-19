@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/15 15:02:43 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/19 14:36:37 by hbanthiy         ###   ########.fr       */
+/*   Created: 2022/07/19 13:36:19 by hbanthiy          #+#    #+#             */
+/*   Updated: 2022/07/19 14:32:44 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
-#include "PresidentialPardonForm.hpp"
+#include "Form.hpp"
 
-
-int main()
+class PresidentialPardonForm : public Form
 {
-    Bureaucrat A;
-   
-    PresidentialPardonForm B;
-   
-    std::cout << B << '\n';      
-    B.execute(A);
-    
-    return (0);
-}
+    private:
+    std::string Target;
+    public:
+    PresidentialPardonForm ();  
+    PresidentialPardonForm(std::string target);
+    ~PresidentialPardonForm();
+    void execute(const Bureaucrat &b);
+};

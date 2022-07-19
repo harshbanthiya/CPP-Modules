@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/15 15:02:43 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/19 14:36:37 by hbanthiy         ###   ########.fr       */
+/*   Created: 2022/07/19 13:36:22 by hbanthiy          #+#    #+#             */
+/*   Updated: 2022/07/19 14:34:35 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
 #include "PresidentialPardonForm.hpp"
 
-
-int main()
+PresidentialPardonForm::PresidentialPardonForm () : Form("Unknown", false, 25, 5)
 {
-    Bureaucrat A;
-   
-    PresidentialPardonForm B;
-   
-    std::cout << B << '\n';      
-    B.execute(A);
     
-    return (0);
+}  
+PresidentialPardonForm::PresidentialPardonForm(std::string target) : Form(target, false, 25, 5)
+{
+
+}
+
+PresidentialPardonForm::~PresidentialPardonForm()
+{
+    
+}
+
+void PresidentialPardonForm::execute(const Bureaucrat &b)
+{
+    
+    std::cout << b.getName() << " " << Target << "has been pardoned by Zaphod Beeblebrox" << '\n';
 }
