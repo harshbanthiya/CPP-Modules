@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 14:20:08 by sheeed            #+#    #+#             */
-/*   Updated: 2022/07/18 13:44:45 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/19 11:11:17 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,13 @@ Form::~Form()
 {
 }
 
+void 			Form::beSigned(Bureaucrat b)
+{
+	if (b.getGrade() <= this->getGradeSign())
+		form_signed = true;
+	else
+		throw(GradeTooLowException());
+}	
 
 Form &				Form::operator=( Form const & rhs )
 {

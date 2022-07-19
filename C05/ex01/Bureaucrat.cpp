@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 13:44:52 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/15 15:22:01 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/19 11:12:39 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,4 +78,9 @@ std::ostream& operator<< (std::ostream& out, const Bureaucrat& f)
 {
 	out << f.getName() << ", bureaucrat grade " << f.getGrade() << ".\n";
     return out;
+}
+
+void 			Bureaucrat::signForm(void)
+{
+	if ()
 }
