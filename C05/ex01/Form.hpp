@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 14:20:02 by sheeed            #+#    #+#             */
-/*   Updated: 2022/07/19 12:30:02 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/19 12:51:00 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,7 @@ class Form
 		unsigned int 	getGradeExecute(void) const;
 		void 			beSigned(const Bureaucrat &f);
 		Form&			operator=(Form const & rhs);
-
-
+		friend std::ostream& operator<< (std::ostream& out, const Form& f);
 };
 
 #endif
