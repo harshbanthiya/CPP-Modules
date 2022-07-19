@@ -6,12 +6,11 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 14:20:08 by sheeed            #+#    #+#             */
-/*   Updated: 2022/07/19 11:11:17 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/19 12:32:43 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
-
 
 Form::Form() : Name("Unknown"), form_signed(false), grade_required_to_sign(150), grade_required_to_execute(150)
 {
@@ -27,30 +26,28 @@ Form::Form(std::string n, bool t, unsigned int sign_, unsigned int execute ) : N
 	return ;
 }
 
-Form::Form( const Form & src )
+Form::Form(const Form &src) : grade_required_to_sign(150), grade_required_to_execute(150)
 {
+	*this = src;
 }
-
 
 Form::~Form()
 {
 }
 
-void 			Form::beSigned(Bureaucrat b)
-{
-	if (b.getGrade() <= this->getGradeSign())
-		form_signed = true;
-	else
-		throw(GradeTooLowException());
-}	
-
 Form &				Form::operator=( Form const & rhs )
 {
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
-	return *this;
+	if (this == &rhs) {return (*this);}
+	
+	std::string* stringPTR = (std::string*)&this->Name;
+	int* execPTR = (int*)&this->grade_required_to_execute;
+	int* signPTR = (int*)&this->grade_required_to_sign;
+	
+	*stringPTR = rhs.Name;
+	*execPTR = rhs.grade_required_to_execute;
+	*signPTR = rhs.grade_required_to_sign;
+
+	return (*this);
 }
 
 const char* Form::GradeTooLowException::what (void) const throw()
@@ -80,9 +77,23 @@ unsigned int 	Form::getGradeExecute(void) const
 	return (this->grade_required_to_execute);
 }
 
-
 std::ostream& operator<< (std::ostream& out, const Form& f)
 {
-	//out << f.getName() << ", bureaucrat grade " << f.getGrade() << ".\n";
-    return out;
+	out << "Form name : "
+		<< f.getName()
+		<< ", is signed : "
+		<< f.getWhetherSigned()
+		<< ", rank to sign : "
+		<< f.getGradeSign()
+		<< ", rank to exec : "
+		<< f.getGradeExecute();
+	return (out);
+}
+
+void Form::beSigned (const Bureaucrat& b)
+{
+	if (b.getGrade() > this->grade_required_to_sign)
+		throw (Form::GradeTooLowException());
+	else
+		form_signed = true;
 }

@@ -6,19 +6,19 @@
 #    By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/15 13:43:17 by hbanthiy          #+#    #+#              #
-#    Updated: 2022/07/15 13:44:15 by hbanthiy         ###   ########.fr        #
+#    Updated: 2022/07/19 12:33:15 by hbanthiy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := c++
 CPPFLAGS := -Wall -Wextra -Werror -std=c++98
-NAME :=	ex00
+NAME :=	ex01
 SRCS :=	main.cpp Bureaucrat.cpp Form.cpp
 OBJS_DIR := object_files
 OBJS := $(addprefix $(OBJS_DIR)/,$(SRCS:.cpp=.o))
 
 all: $(NAME)
-		@echo "Type ./ex00 - to run the program, tests are in the main file"
+		@echo "Type ./ex01 - to run the program, tests are in the main file"
 
 $(OBJS_DIR)/%.o: %.cpp
 		@mkdir -p $(OBJS_DIR)

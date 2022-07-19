@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 13:44:56 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/18 13:49:23 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/19 12:28:43 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@
 # include <iostream>
 # include <string>
 # include <exception>
+# include "Form.hpp"
 
+class Form ;
 class Bureaucrat
 {
 
@@ -44,7 +46,7 @@ class Bureaucrat
 		unsigned int 	getGrade(void) const;		
 		void 			incrementGrade(void);
 		void 			decrementGrade(void);
-		void 			signForm(void);
+		void 			signForm(Form &n);
 		friend std::ostream& operator<< (std::ostream& out, const Bureaucrat& f);
 };
 
