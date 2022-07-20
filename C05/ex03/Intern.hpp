@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sheeed <sheeed@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/20 13:34:31 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/20 13:40:23 by sheeed           ###   ########.fr       */
+/*   Created: 2022/07/20 13:45:26 by hbanthiy          #+#    #+#             */
+/*   Updated: 2022/07/20 13:46:01 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef INTERN_HPP
 # define INTERN_HPP
