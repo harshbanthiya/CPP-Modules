@@ -3,27 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sheeed <sheeed@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 15:02:43 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/20 10:18:37 by sheeed           ###   ########.fr       */
+/*   Updated: 2022/07/20 10:57:50 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
-#include "PresidentialPardonForm.hpp"
-
-
 #include <iostream>
 #include "Bureaucrat.hpp"
-#include "AForm.hpp"
+#include "Form.hpp"
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 
 int	main(void)
 {
-	AForm			*form = NULL;
+	Form			*form = NULL;
 	Bureaucrat		bob("bob", 1);
 	Bureaucrat		phil("phil", 40);
 	Bureaucrat		luc("luc", 150);
@@ -37,7 +33,7 @@ int	main(void)
 	}
 	catch (std::exception &e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cout << e.what() << '\n';
 	}
 
 
@@ -50,7 +46,7 @@ int	main(void)
 	}
 	catch (std::exception &e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cout << e.what() << '\n';
 	}
 
 
@@ -64,7 +60,7 @@ int	main(void)
 	}
 	catch (std::exception &e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cout << e.what() << '\n';
 	}
 
 
