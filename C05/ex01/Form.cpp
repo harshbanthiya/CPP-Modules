@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 14:20:08 by sheeed            #+#    #+#             */
-/*   Updated: 2022/07/19 12:51:03 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/20 10:45:51 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Form::Form() : Name("Unknown"), form_signed(false), grade_required_to_sign(150),
 	std::cout << "Default Constructor called \n";
 }
 
-Form::Form(std::string n, bool t, unsigned int sign_, unsigned int execute ) : Name(n), form_signed(t), grade_required_to_sign(sign_), grade_required_to_execute(execute)
+Form::Form(std::string n, unsigned int sign_, unsigned int execute ) : Name(n), form_signed(false), grade_required_to_sign(sign_), grade_required_to_execute(execute)
 {
 	if (execute < 1 || sign_ < 1)
 		throw (GradeTooHighException());
@@ -52,12 +52,12 @@ Form &				Form::operator=( Form const & rhs )
 
 const char* Form::GradeTooLowException::what (void) const throw()
 {
-	return "The grade you are trying to enter is too low, maximum allowed value is 150";
+	return "The grade is too low!";
 }
 
 const char* Form::GradeTooHighException::what (void) const throw()
 {
-	return "The grade you are trying to enter is too high, maximum allowed value is 1";;
+	return "The grade is too high!";
 }
 
 std::string		Form::getName(void) const
@@ -92,7 +92,7 @@ std::ostream& operator<< (std::ostream& out, const Form& f)
 
 void Form::beSigned (const Bureaucrat& b)
 {
-	if (b.getGrade() > this->grade_required_to_sign)
+	if (b.getGrade() > (int)this->grade_required_to_sign)
 		throw (Form::GradeTooLowException());
 	else
 		form_signed = true;
