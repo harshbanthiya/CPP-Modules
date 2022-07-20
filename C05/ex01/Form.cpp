@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sheeed <sheeed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 14:20:08 by sheeed            #+#    #+#             */
-/*   Updated: 2022/07/19 12:51:03 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/20 10:16:19 by sheeed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
+
 
 Form::Form() : Name("Unknown"), form_signed(false), grade_required_to_sign(150), grade_required_to_execute(150)
 {
@@ -26,26 +27,27 @@ Form::Form(std::string n, bool t, unsigned int sign_, unsigned int execute ) : N
 	return ;
 }
 
-Form::Form(const Form &src) : grade_required_to_sign(150), grade_required_to_execute(150)
+Form::Form( const Form & src )
 {
-	*this = src;
 }
+
 
 Form::~Form()
 {
 }
 
+
 Form &				Form::operator=( Form const & rhs )
 {
-	if (this == &rhs) {return (*this);}
+	if (this == &ref) {return (*this);}
 	
-	std::string* stringPTR = (std::string*)&this->Name;
-	int* execPTR = (int*)&this->grade_required_to_execute;
-	int* signPTR = (int*)&this->grade_required_to_sign;
-	
-	*stringPTR = rhs.Name;
-	*execPTR = rhs.grade_required_to_execute;
-	*signPTR = rhs.grade_required_to_sign;
+	std::string* stringPTR = (std::string*)&this->_name;
+	int* execPTR = (int*)&this->_rankToExec;
+	int* signPTR = (int*)&this->_rankToSign;
+
+	*stringPTR = ref._name;
+	*execPTR = ref._rankToExec;
+	*signPTR = ref._rankToSign;
 
 	return (*this);
 }
@@ -77,23 +79,24 @@ unsigned int 	Form::getGradeExecute(void) const
 	return (this->grade_required_to_execute);
 }
 
+
 std::ostream& operator<< (std::ostream& out, const Form& f)
 {
-	out << "Form name : "
-		<< f.getName()
+	o 	<< "Form name : "
+		<< form.getName()
 		<< ", is signed : "
-		<< f.getWhetherSigned()
+		<< form.getIsSigned()
 		<< ", rank to sign : "
-		<< f.getGradeSign()
+		<< form.getRankToSign()
 		<< ", rank to exec : "
-		<< f.getGradeExecute();
-	return (out);
+		<< form.getRankToExec();
+	return (o);
+	
 }
-
 void Form::beSigned (const Bureaucrat& b)
 {
-	if (b.getGrade() > this->grade_required_to_sign)
-		throw (Form::GradeTooLowException());
+	if (b.getRank() > this->_rankToSign)
+		throw Form::GradeTooLowException();
 	else
-		form_signed = true;
+		this->_isSigned = true;
 }
