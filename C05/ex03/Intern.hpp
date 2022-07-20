@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sheeed <sheeed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 13:34:31 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/20 13:34:42 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/20 13:40:23 by sheeed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <string>
+# include "Form.hpp"
 
 class Intern
 {
@@ -23,14 +24,11 @@ class Intern
 
 		Intern();
 		Intern( Intern const & src );
-		~Intern();
+		virtual ~Intern();
 
 		Intern &		operator=( Intern const & rhs );
-
-	private:
+		Form*	 		makeForm (std::string, std::string);
 
 };
-
-std::ostream &			operator<<( std::ostream & o, Intern const & i );
 
 #endif
