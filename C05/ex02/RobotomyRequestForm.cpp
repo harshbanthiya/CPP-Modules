@@ -6,12 +6,12 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 13:35:20 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/20 12:33:04 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/20 13:24:14 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
-#include <time.h>
+
 RobotomyRequestForm::RobotomyRequestForm () : Form("Unknown", 72, 45)
 {
     
