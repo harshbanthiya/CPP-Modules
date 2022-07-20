@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 13:44:52 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/15 15:22:01 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/20 10:34:48 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Bureaucrat::Bureaucrat(): Name("Unknown"), grade(150)
 {
 	return ;
 }
-Bureaucrat::Bureaucrat(std::string const n, unsigned int val): Name(n), grade(val){
+Bureaucrat::Bureaucrat(std::string const n, int val): Name(n), grade(val){
 	if (grade < 1)
 		throw (GradeTooHighException());
 	if (grade > 150)
@@ -52,26 +52,26 @@ std::string 	Bureaucrat::getName(void) const
 	return (this->Name);
 }
 
-unsigned int 	Bureaucrat::getGrade(void) const
+int 	Bureaucrat::getGrade(void) const
 {
 	return (this->grade);
 }		
 
-void 			Bureaucrat::incrementGrade(void)
+void 			Bureaucrat::incrementGrade(int n)
 {
-		if (this->getGrade() == 1)
+		if ((this->getGrade() - n) < 1)
 			throw(Bureaucrat::GradeTooHighException());
-		if (this->getGrade() <= 150 && this->getGrade() > 1)
-			this->grade += 1;
+		else 
+			this->grade -= n;
 }
 
 
-void 			Bureaucrat::decrementGrade(void)
+void 			Bureaucrat::decrementGrade(int n)
 {
-		if (this->getGrade() == 150)
+		if ((this->getGrade() + n) > 150)
 			throw(Bureaucrat::GradeTooLowException());
-		if (this->getGrade() >= 1 && this->getGrade() < 150)
-			this->grade -= 1;
+		else 
+			this->grade += n;
 }
 
 std::ostream& operator<< (std::ostream& out, const Bureaucrat& f)
