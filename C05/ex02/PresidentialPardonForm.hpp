@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 13:36:19 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/20 10:51:41 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/20 11:20:56 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,6 @@ class PresidentialPardonForm : public Form
     PresidentialPardonForm ();  
     PresidentialPardonForm(std::string target);
     ~PresidentialPardonForm();
-    void execute(const Bureaucrat &b);
+    PresidentialPardonForm&	operator=(PresidentialPardonForm const & rhs);
+    void execute(Bureaucrat &b) const;
 };

@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 13:35:31 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/20 10:52:59 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/20 11:18:35 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,14 @@ ShrubberyCreationForm::ShrubberyCreationForm () : Form("Unknown", 145, 137)
 ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : Form(target, 145, 137)
 {
 
+}
+
+ShrubberyCreationForm&	ShrubberyCreationForm::operator=(ShrubberyCreationForm const & rhs)
+{
+ if (this == &rhs) 
+        {return (*this);}
+    this->Form::operator=(rhs);
+    return (*this);
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm()

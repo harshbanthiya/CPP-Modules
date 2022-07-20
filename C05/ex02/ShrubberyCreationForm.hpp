@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 13:35:28 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/20 10:48:43 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/20 11:21:47 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,6 @@ class ShrubberyCreationForm : public Form
     ShrubberyCreationForm ();  
     ShrubberyCreationForm(std::string target);
     ~ShrubberyCreationForm();
+    ShrubberyCreationForm&	operator=(ShrubberyCreationForm const & rhs);
     void execute (Bureaucrat const & executor) const;
 };
