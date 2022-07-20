@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 15:02:43 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/20 13:45:56 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/20 13:51:22 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 #include "ShrubberyCreationForm.hpp"
 #include "Intern.hpp"
 // Grade required to exectue Shrubbery : 137 ; Robotomy : 45 ; Presidential : 5
-
 int	main(void)
 {
 	Intern	someRandomIntern;
