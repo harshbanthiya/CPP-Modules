@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 14:20:02 by sheeed            #+#    #+#             */
-/*   Updated: 2022/07/19 14:32:50 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/20 10:53:07 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class Form
 	public:
 
 		Form();
-		Form(std::string n, bool t, unsigned int sign_, unsigned int execute);
+		Form(std::string n, unsigned int sign_, unsigned int execute);
 		Form( Form const & src );
 		~Form();
 		class GradeTooHighException : public std::exception{

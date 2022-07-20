@@ -3,70 +3,70 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sheeed <sheeed@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 15:02:43 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/20 10:20:22 by sheeed           ###   ########.fr       */
+/*   Updated: 2022/07/20 10:35:48 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-int
-main (int ac, char **av)
+
+int main ()
 {
 	try
 	{
-		Bureaucrat		test = Bureaucrat("Paul", 1);
-		std::cout << test << std::endl;
-		test.lowerRank(10);
-		std::cout << test << std::endl;
-		test.upperRank(10);
-		std::cout << test << std::endl;
-		test.upperRank(10);
-		std::cout << test << std::endl;
+		Bureaucrat		test = Bureaucrat("Logan", 1);
+		std::cout << test << '\n';
+		test.decrementGrade(10);
+		std::cout << test << '\n';
+		test.incrementGrade(10);
+		std::cout << test << '\n';
+		test.incrementGrade(10);
+		std::cout << test << '\n';
 	}
 	catch (std::exception &e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cout << e.what() << '\n';
 	}
-	std::cout << std::endl;
+	std::cout << '\n';
 
 	try
 	{
-		Bureaucrat		test = Bureaucrat("Paul", 1);
-		std::cout << test << std::endl;
-		test.lowerRank(100);
-		std::cout << test << std::endl;
-		test.upperRank(10);
-		std::cout << test << std::endl;
-		test.lowerRank(100);
-		std::cout << test << std::endl;
+		Bureaucrat		test = Bureaucrat("Prof Charles Xavier", 1);
+		std::cout << test << '\n';
+		test.decrementGrade(100);
+		std::cout << test << '\n';
+		test.incrementGrade(10);
+		std::cout << test << '\n';
+		test.decrementGrade(100);
+		std::cout << test << '\n';
 	}
 	catch (std::exception &e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cout << e.what() << '\n';
 	}
-	std::cout << std::endl;
+	std::cout << '\n';
 
 	try
 	{
-		Bureaucrat		test = Bureaucrat("Paul", 0);
+		Bureaucrat		test = Bureaucrat("Jean Grey", 0);
 	}
 	catch (std::exception &e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cout << e.what() << '\n';
 	}
-	std::cout << std::endl;
+	std::cout << '\n';
 
 	try
 	{
-		Bureaucrat		test = Bureaucrat("Paul", 151);
+		Bureaucrat		test = Bureaucrat("Cyclops without glasses", 151);
 	}
 	catch (std::exception &e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cout << e.what() << '\n';
 	}
-	std::cout << std::endl;
+	std::cout << '\n';
 	
 	
 }
