@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 13:36:22 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/20 11:21:10 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/20 12:54:42 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ PresidentialPardonForm::PresidentialPardonForm(std::string target) : Form(target
 {
 
 }
+PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &src){*this = src;}
 PresidentialPardonForm&	PresidentialPardonForm::operator=(PresidentialPardonForm const & rhs)
 {
     if (this == &rhs) 
@@ -32,8 +33,9 @@ PresidentialPardonForm::~PresidentialPardonForm()
     
 }
 
-void PresidentialPardonForm::execute(Bureaucrat &b) const
+void PresidentialPardonForm::execute(Bureaucrat const &executor) const
 {
-    
-    std::cout << b.getName() << " " << Target << "has been pardoned by Zaphod Beeblebrox" << '\n';
+    if (executor.getGrade() > this->getGradeExecute())
+		throw Form::GradeTooLowException();
+    std::cout << executor.getName() << "has been pardoned by Zaphod Beeblebrox" << '\n';
 }

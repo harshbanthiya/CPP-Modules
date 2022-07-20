@@ -6,18 +6,18 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 14:20:08 by sheeed            #+#    #+#             */
-/*   Updated: 2022/07/20 11:14:31 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/20 12:50:24 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form() : Name("Unknown"), form_signed(false), grade_required_to_sign(150), grade_required_to_execute(150)
+Form::Form() : Name("Unknown"), form_signed(false), grade_required_to_sign(1), grade_required_to_execute(1)
 {
 	std::cout << "Default Constructor called \n";
 }
 
-Form::Form(std::string n, unsigned int sign_, unsigned int execute ) : Name(n), form_signed(false), grade_required_to_sign(sign_), grade_required_to_execute(execute)
+Form::Form(std::string n, int sign_, int execute ) : Name(n), form_signed(false), grade_required_to_sign(sign_), grade_required_to_execute(execute)
 {
 	if (execute < 1 || sign_ < 1)
 		throw (GradeTooHighException());
@@ -26,7 +26,7 @@ Form::Form(std::string n, unsigned int sign_, unsigned int execute ) : Name(n), 
 	return ;
 }
 
-Form::Form(const Form &src) : grade_required_to_sign(150), grade_required_to_execute(150)
+Form::Form(const Form &src) : grade_required_to_sign(1), grade_required_to_execute(1)
 {
 	*this = src;
 }
@@ -68,11 +68,11 @@ bool 			Form::getWhetherSigned(void) const
 {
 	return (this->form_signed);
 }
-unsigned int	Form::getGradeSign(void) const
+int	Form::getGradeSign(void) const
 {
 	return (this->grade_required_to_sign);
 }
-unsigned int 	Form::getGradeExecute(void) const
+int 	Form::getGradeExecute(void) const
 {
 	return (this->grade_required_to_execute);
 }
@@ -86,7 +86,7 @@ std::ostream& operator<< (std::ostream& out, const Form& f)
 		<< ", rank to sign : "
 		<< f.getGradeSign()
 		<< ", rank to exec : "
-		<< f.getGradeExecute();
+		<< f.getGradeExecute() << '\n';
 	return (out);
 }
 

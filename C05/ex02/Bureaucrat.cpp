@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sheeed <sheeed@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 13:44:52 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/20 11:04:35 by sheeed           ###   ########.fr       */
+/*   Updated: 2022/07/20 12:55:37 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Bureaucrat::Bureaucrat(): Name("Unknown"), grade(150)
 {
 	return ;
 }
-Bureaucrat::Bureaucrat(std::string const n, unsigned int val): Name(n), grade(val){
+Bureaucrat::Bureaucrat(std::string const n, int val): Name(n), grade(val){
 	if (grade < 1)
 		throw (GradeTooHighException());
 	if (grade > 150)
@@ -52,7 +52,7 @@ std::string 	Bureaucrat::getName(void) const
 	return (this->Name);
 }
 
-unsigned int 	Bureaucrat::getGrade(void) const
+int 	Bureaucrat::getGrade(void) const
 {
 	return (this->grade);
 }		

@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 15:02:43 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/20 11:18:47 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/20 12:52:13 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,12 @@
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 
+// Grade required to exectue Shrubbery : 137 ; Robotomy : 45 ; Presidential : 5
 int	main(void)
 {
 	Form			*form = NULL;
-	Bureaucrat		bob("bob", 1);
-	Bureaucrat		phil("phil", 40);
+	Bureaucrat		bob("bob", 140);
+	Bureaucrat		phil("phil", 140);
 	Bureaucrat		luc("luc", 150);
 
 	try

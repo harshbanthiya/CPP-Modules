@@ -6,12 +6,12 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 13:35:20 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/20 10:52:26 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/20 12:33:04 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
-
+#include <time.h>
 RobotomyRequestForm::RobotomyRequestForm () : Form("Unknown", 72, 45)
 {
     
@@ -19,6 +19,16 @@ RobotomyRequestForm::RobotomyRequestForm () : Form("Unknown", 72, 45)
 RobotomyRequestForm::RobotomyRequestForm(std::string target) : Form(target, 72, 45)
 {
 
+}
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &src){*this = src;}
+
+
+RobotomyRequestForm&	RobotomyRequestForm::operator=(RobotomyRequestForm const & rhs)
+{
+ if (this == &rhs) 
+        {return (*this);}
+    this->Form::operator=(rhs);
+    return (*this);
 }
 
 RobotomyRequestForm::~RobotomyRequestForm()

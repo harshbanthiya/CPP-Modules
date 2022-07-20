@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sheeed <sheeed@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 13:44:56 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/20 11:04:21 by sheeed           ###   ########.fr       */
+/*   Updated: 2022/07/20 12:45:46 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ class Bureaucrat
 
 	private:
 	std::string		Name;
-	unsigned int 	grade; 
+	int 			grade; 
 	
 	public:
 
 		Bureaucrat();
-		Bureaucrat(std::string const n, unsigned int val);
+		Bureaucrat(std::string const n, int val);
 		Bureaucrat( Bureaucrat const & src );
 		~Bureaucrat();
 		class GradeTooHighException : public std::exception{
@@ -43,12 +43,12 @@ class Bureaucrat
 
 		Bureaucrat&		operator=( Bureaucrat const & rhs );
 		std::string 	getName(void) const;
-		unsigned int 	getGrade(void) const;		
+		int 			getGrade(void) const;		
 		void 			incrementGrade(void);
 		void 			decrementGrade(void);
 		void 			signForm(Form &n);
 		void			executeForm (const Form& form);
-		friend std::ostream& operator<< (std::ostream& out, const Bureaucrat& f);
 };
+std::ostream& operator<< (std::ostream& out, const Bureaucrat& f);
 
 #endif
