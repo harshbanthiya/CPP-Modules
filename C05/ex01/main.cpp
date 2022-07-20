@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 15:02:43 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/20 10:44:04 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/20 13:05:21 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,11 @@ int main ()
 
 	try
 	{
-		Bureaucrat		paul = Bureaucrat("Logan", 1);
+		Bureaucrat		logan = Bureaucrat("Logan", 1);
 		Form			f("A12-B34", 150, 150);
 	
 		std::cout << f << '\n';
-		paul.signForm(f);
+		logan.signForm(f);
 		std::cout << f << '\n';
 	}
 	catch (std::exception &e)
@@ -68,11 +68,11 @@ int main ()
 		
 	try
 	{
-		Bureaucrat		paul = Bureaucrat("Logan", 10);
+		Bureaucrat		logan = Bureaucrat("Logan", 10);
 		Form			f("A12-B34", 1, 1);
 
 		std::cout << f << '\n';
-		paul.signForm(f);
+		logan.signForm(f);
 		std::cout << f << '\n';
 	}
 	catch (std::exception &e)

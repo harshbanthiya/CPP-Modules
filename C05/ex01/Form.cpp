@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 14:20:08 by sheeed            #+#    #+#             */
-/*   Updated: 2022/07/20 11:08:23 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/20 13:04:56 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,12 @@ Form &				Form::operator=( Form const & rhs )
 
 const char* Form::GradeTooLowException::what (void) const throw()
 {
-	return "The grade you are trying to enter is too low, maximum allowed value is 150";
+	return "The grade is too low";
 }
 
 const char* Form::GradeTooHighException::what (void) const throw()
 {
-	return "The grade you are trying to enter is too high, maximum allowed value is 1";;
+	return "The grade is too high";;
 }
 
 std::string		Form::getName(void) const
