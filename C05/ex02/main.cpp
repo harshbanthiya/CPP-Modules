@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 15:02:43 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/20 12:52:13 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/20 13:17:54 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@
 int	main(void)
 {
 	Form			*form = NULL;
-	Bureaucrat		bob("bob", 140);
-	Bureaucrat		phil("phil", 140);
-	Bureaucrat		luc("luc", 150);
+	Bureaucrat		bob("bob", 1);
+	Bureaucrat		phil("phil", 1);
+	Bureaucrat		luc("luc", 1);
 
 	try
 	{

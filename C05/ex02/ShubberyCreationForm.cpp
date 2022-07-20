@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 13:35:31 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/20 12:33:43 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/20 13:17:05 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void ShrubberyCreationForm::execute (Bureaucrat const & executor) const
 	{
 		std::ofstream ofs;
 
-		ofs.open(executor.getName() + "Shrubbery");
+		ofs.open(executor.getName() + "_shrubbery");
 		if (ofs.fail())
 		{
 			std::cerr << "cannot create " << (executor.getName() + "_shrubbery") << " file" << '\n';
