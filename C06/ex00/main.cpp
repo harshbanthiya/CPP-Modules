@@ -6,18 +6,19 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 09:57:59 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/21 10:49:04 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/21 14:45:48 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <typeinfo>
+#include "Conversion.hpp"
 
 int main(int argc, char **argv)
 {
+    
     if (argc == 2)
     {
-        std::cout << typeid(*(argv[1])).name() << '\n'; 
+        Conversion  A(argv[1]);
     }
     return (0);
 }
