@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sheeed <sheeed@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 15:08:06 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/22 15:17:50 by sheeed           ###   ########.fr       */
+/*   Updated: 2022/07/22 15:24:09 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ class Base
 {
     public:
     
-    virtual ~Base();
+    virtual ~Base(void){};
 
 };
 
@@ -40,8 +40,8 @@ class C : public Base
         C (void) {std::cout << "Class C constructor called\n";};
 };
 
-Base *generate(void);
-void identify(Base *p);
-void identify(Base &p);
+Base    *generate(void);
+void    identify(Base *p);
+void    identify(Base &p);
 
 #endif 

@@ -6,14 +6,14 @@
 #    By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/15 13:43:17 by hbanthiy          #+#    #+#              #
-#    Updated: 2022/07/22 15:07:31 by hbanthiy         ###   ########.fr        #
+#    Updated: 2022/07/22 15:28:02 by hbanthiy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC := c++
-CPPFLAGS := -Wall -Wextra -Werror -std=c++98
+CC := clang++
+CPPFLAGS := -Wall -Werror -Wextra -std=c++98
 NAME :=	ex02
-SRCS :=	main.cpp 
+SRCS :=	main.cpp Base.cpp
 OBJS_DIR := object_files
 OBJS := $(addprefix $(OBJS_DIR)/,$(SRCS:.cpp=.o))
 
