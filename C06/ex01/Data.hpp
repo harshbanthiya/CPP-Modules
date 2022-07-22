@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Data.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sheeed <sheeed@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 13:25:23 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/22 13:56:23 by sheeed           ###   ########.fr       */
+/*   Updated: 2022/07/22 14:04:43 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Data
 		~Data(){};
 
 		Data &operator=( Data const & rhs ){this->_data = rhs._data; return *this;};
-		std::string getData(void) const {return this->_data};
+		std::string getData(void) const {return (this->_data);};
 };
 
 uintptr_t	serialize(Data *ptr);

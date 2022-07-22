@@ -6,14 +6,14 @@
 #    By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/15 13:43:17 by hbanthiy          #+#    #+#              #
-#    Updated: 2022/07/22 13:24:44 by hbanthiy         ###   ########.fr        #
+#    Updated: 2022/07/22 14:04:47 by hbanthiy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := c++
 CPPFLAGS := -Wall -Wextra -Werror -std=c++98
 NAME :=	ex01
-SRCS :=	main.cpp Data.cpp
+SRCS :=	main.cpp Serialize.cpp
 OBJS_DIR := object_files
 OBJS := $(addprefix $(OBJS_DIR)/,$(SRCS:.cpp=.o))
 
