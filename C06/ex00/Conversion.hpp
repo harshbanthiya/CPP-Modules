@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Conversion.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sheeed <sheeed@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 13:54:59 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/21 18:40:37 by sheeed           ###   ########.fr       */
+/*   Updated: 2022/07/22 12:41:27 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,13 @@ class Conversion
 		void check_overflow(std::string &str);
 		void convert_int(std::string &str);
 		void convert_char(std::string &str);
+		void convert_float(std::string &str);
+		void convert_double(std::string &str);
 
 		void print_int(void) const;
 		void print_char(void) const;
+		void print_float(void) const;
+		void print_double(void) const;
 		void print(void) const;
 
 };
