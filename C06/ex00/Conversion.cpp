@@ -6,12 +6,12 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 13:54:56 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/22 12:44:15 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/22 13:37:03 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Conversion.hpp"
-#include <iomanip>
+
 
 bool 	is_char(std::string &str);
 bool 	is_int(std::string &str);
@@ -154,9 +154,7 @@ void 	Conversion::check_overflow(std::string &str)
 			this->_int_overflow = true;
 		if (nbr < CHAR_MIN || nbr > CHAR_MAX)
 			this->_char_overflow = true;
-		if (nbr < INT_MIN || nbr > INT_MAX)
-			this->_int_overflow = true;
-		if (nbr <= std::numeric_limits<float>::max() * -1  || nbr> std::numeric_limits<float>::max())
+		if (nbr <= std::numeric_limits<float>::max() * -1  || nbr > std::numeric_limits<float>::max())
 			this->_float_overflow = true;
 	}
 	

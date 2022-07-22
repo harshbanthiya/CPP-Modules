@@ -6,7 +6,7 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 13:54:59 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/22 12:44:01 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/22 13:36:57 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <iostream>
 # include <string>
+# include <limits>
+# include <iomanip>
 
 class Conversion
 {
