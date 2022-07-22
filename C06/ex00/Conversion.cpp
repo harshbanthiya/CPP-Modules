@@ -6,7 +6,7 @@
 /*   By: sheeed <sheeed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 13:54:56 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/22 12:36:21 by sheeed           ###   ########.fr       */
+/*   Updated: 2022/07/22 12:39:30 by sheeed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ bool 	is_float(std::string &str)
 {
 	std::string::const_iterator it = str.begin();
 	bool decimalPoint = false;
-	int minSize = 0;
+	size_t minSize = 0;
 
 	if (str.length() > 0 && (str[0] == '-' || str[0] == '+'))
 	{
@@ -108,7 +108,7 @@ bool 	is_double(std::string &str)
 {
 	std::string::const_iterator it = str.begin();
 	bool decimalPoint = false;
-	int minSize = 0;
+	size_t minSize = 0;
 
 	if (str.length() > 0 && (str[0] == '-' || str[0] == '+'))
 	{
