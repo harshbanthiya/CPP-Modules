@@ -6,9 +6,12 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/26 13:40:45 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/26 13:55:21 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/26 13:57:08 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef ITER_HPP
+# define ITER_HPP
 
 #include <iostream>
 
@@ -24,3 +27,5 @@ void	putstr (T & str)
 {
 	std::cout << str << '\n';
 }
+
+#endif
