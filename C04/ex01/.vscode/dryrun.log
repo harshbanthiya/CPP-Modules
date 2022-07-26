@@ -1,0 +1,20 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/sheeed/CPP-Modules/C04/ex01'
+mkdir -p object_files
+c++ -Wall -Wextra -Werror -std=c++98 -o object_files/main.o -c main.cpp
+mkdir -p object_files
+c++ -Wall -Wextra -Werror -std=c++98 -o object_files/Animal.o -c Animal.cpp
+mkdir -p object_files
+c++ -Wall -Wextra -Werror -std=c++98 -o object_files/Dog.o -c Dog.cpp
+mkdir -p object_files
+c++ -Wall -Wextra -Werror -std=c++98 -o object_files/Cat.o -c Cat.cpp
+mkdir -p object_files
+c++ -Wall -Wextra -Werror -std=c++98 -o object_files/WrongAnimal.o -c WrongAnimal.cpp
+mkdir -p object_files
+c++ -Wall -Wextra -Werror -std=c++98 -o object_files/WrongCat.o -c WrongCat.cpp
+mkdir -p object_files
+c++ -Wall -Wextra -Werror -std=c++98 -o object_files/Brain.o -c Brain.cpp
+c++ -Wall -Wextra -Werror -std=c++98 object_files/main.o object_files/Animal.o object_files/Dog.o object_files/Cat.o object_files/WrongAnimal.o object_files/WrongCat.o object_files/Brain.o -o ex01
+echo "Type ./ex01 - to run the program, tests are in the main file"
+make: Leaving directory `/Users/sheeed/CPP-Modules/C04/ex01'
+ 
