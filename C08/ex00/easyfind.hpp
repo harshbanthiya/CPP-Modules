@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sheeed <sheeed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 14:39:03 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/28 14:52:52 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/28 14:58:00 by sheeed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,18 @@
 # include <iostream>
 # include <algorithm>
 
-template <typename T>
-int     easyFind(T &container, int to_find)
+class NotInContainer : public std::exception
 {
-    
-}
+	public:
+		virtual const char * what (void) const throw() {return ("No such value in this container");}
+};
 
+template<typename T>
+bool easyfind (T container, int toFind)
+{
+	if (std::find(container.begin(), container.end(), toFind) != container.end())
+		return (true);
+	else
+		throw NotInContainer();
+}
 #endif 
