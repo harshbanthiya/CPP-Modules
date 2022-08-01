@@ -6,7 +6,13 @@
 /*   By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 14:38:37 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/28 14:38:37 by hbanthiy         ###   ########.fr       */
+/*   Updated: 2022/07/31 11:20:41 by hbanthiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "easyfind.hpp"
+
+int main()
+{
+    return (0);
+}
