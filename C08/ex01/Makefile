@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hbanthiy <hbanthiy@student.42.fr>          +#+  +:+       +#+         #
+#    By: sheeed <sheeed@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/15 13:43:17 by hbanthiy          #+#    #+#              #
-#    Updated: 2022/08/01 11:09:20 by hbanthiy         ###   ########.fr        #
+#    Updated: 2022/08/01 11:31:28 by sheeed           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC := c++
 CPPFLAGS := -Wall -Wextra -Werror -std=c++98
 NAME :=	ex01
-SRCS :=	main.cpp
+SRCS :=	main.cpp Span.cpp
 OBJS_DIR := object_files
 OBJS := $(addprefix $(OBJS_DIR)/,$(SRCS:.cpp=.o))
 
