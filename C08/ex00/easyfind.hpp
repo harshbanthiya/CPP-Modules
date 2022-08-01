@@ -6,7 +6,7 @@
 /*   By: sheeed <sheeed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 14:39:03 by hbanthiy          #+#    #+#             */
-/*   Updated: 2022/07/28 14:58:00 by sheeed           ###   ########.fr       */
+/*   Updated: 2022/08/01 11:02:26 by sheeed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <algorithm>
+# include <vector>
 
 class NotInContainer : public std::exception
 {
