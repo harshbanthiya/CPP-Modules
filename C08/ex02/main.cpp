@@ -3,18 +3,18 @@
 int main()
 {
 	{
-		std::cout << "MutantStack tests" << std::endl;
+		std::cout << "MutantStack tests" << '\n';
 		
 		MutantStack<int> mstack;
 		
 		mstack.push(5);
 		mstack.push(17);
 		
-		std::cout << mstack.top() << std::endl;
+		std::cout << mstack.top() << '\n';
 		mstack.pop();
-		std::cout << mstack.size() << std::endl;
+		std::cout << mstack.size() << '\n';
 		mstack.pop();
-		std::cout << mstack.size() << std::endl;
+		std::cout << mstack.size() << '\n';
 		
 		mstack.push(3);
 		mstack.push(5);
@@ -28,24 +28,24 @@ int main()
 		--it;
 		while (it != ite)
 		{
-			std::cout << *it << std::endl;
+			std::cout << *it << '\n';
 			++it;
 		}
 	}
 
 	{
-		std::cout << "List tests" << std::endl;
+		std::cout << "List tests" << '\n';
 
 		std::list<int> mstack;
 
 		mstack.push_back(5);
 		mstack.push_back(17);
 		
-		std::cout << mstack.back() << std::endl;
+		std::cout << mstack.back() << '\n';
 		mstack.pop_back();
-		std::cout << mstack.size() << std::endl;
+		std::cout << mstack.size() << '\n';
 		mstack.pop_back();
-		std::cout << mstack.size() << std::endl;
+		std::cout << mstack.size() << '\n';
 
 
 		mstack.push_back(3);
@@ -60,7 +60,7 @@ int main()
 		// --it;
 		while (it != ite)
 		{
-			std::cout << *it << std::endl;
+			std::cout << *it << '\n';
 			++it;
 		}
 	}
